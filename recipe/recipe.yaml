@@ -14,10 +14,10 @@ source:
     - set-empty-string.patch
     - change-compiler-parameters.patch
     - skip-complex256-in-windows.patch
-    - adapt-type-tests-for-windows.patch
+    - adapt-type-tests-for-windows-and-aarch.patch
 
 build:
-  number: 1
+  number: 2
   script:
     - if: win
       then:
