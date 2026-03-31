@@ -15,9 +15,10 @@ source:
     - change-compiler-parameters.patch
     - skip-complex256-in-windows.patch
     - adapt-type-tests-for-windows-and-aarch.patch
+    - update-tests-for-hdf5_2.patch
 
 build:
-  number: 2
+  number: 3
   script:
     - if: win
       then:
