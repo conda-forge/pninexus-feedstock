@@ -1,5 +1,16 @@
 --- a/test/h5cpp_tests/node_tests/node_iterator_test.py
 +++ b/test/h5cpp_tests/node_tests/node_iterator_test.py
+@@ -109,8 +109,8 @@
+
+         nodes = [node.link.path.name for node in entry.nodes]
+         refnames = ["data", "instrument", "sample"]
+-        self.assertListEqual(nodes, refnames,
+-                             "Comparison of node names: {}".format(nodes))
++        self.assertSetEqual(set(nodes), set(refnames),
++                            "Comparison of node names: {}".format(nodes))
+
+     def test_recursive_node_iteration(self):
+
 @@ -123,8 +123,15 @@
                   h5cpp.Path("/entry/instrument/detector_2"),
                   h5cpp.Path("/entry/instrument/detector_2/data")
