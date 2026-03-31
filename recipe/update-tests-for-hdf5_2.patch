@@ -14,13 +14,13 @@
 
 --- a/test/h5cpp_tests/node_tests/link_iteration_test.py
 +++ b/test/h5cpp_tests/node_tests/link_iteration_test.py
-@@ -88,8 +88,9 @@
+@@ -88,5 +88,6 @@
 
          links = [link.path.name for link in entry.links]
 
 -        self.assertListEqual(links, ["data", "instrument", "sample"],
 -                             "Comparison of link names {}".format(links))
-+        self.assertSelEqual(set(links),
++        self.assertSetEqual(set(links),
 +                            set(["data", "instrument", "sample"]),
 +                            "Comparison of link names {}".format(links))
 
