@@ -27,14 +27,14 @@
      h5cpp_path = os.environ.get('H5CPP_LOCAL_PATH')
      if h5cpp_path:
          # use when h5cpp locally installed
-@@ -149,11 +160,19 @@
+@@ -149,8 +160,16 @@
  # ----------------------------------------------------------------------------
  # set compiler options
  # ----------------------------------------------------------------------------
 -if sys.platform == "win32":
 -    pass
 +if sys.platform in ["win32", "win64"]:
-+    arguments = ['/std:c++17']
++    arguments = ['/std:c++17', '/DH5Dread_chunk_vers=1']
  else:
 -    arguments = ['-std=c++17', '-Wall', '-Wextra', '-fdiagnostics-show-option']
 -    nexus_config.add_compiler_arguments(arguments)
@@ -46,7 +46,7 @@
 +    #       '-fdiagnostics-show-option', '-flto=auto', '-ffat-lto-objects']
 +    # no-lto to be on the save side
 +    arguments = ['-std=c++17', '-Wall', '-Wextra', '-fdiagnostics-show-option',
-+                 '-fno-lto']
++                 '-fno-lto', '-DH5Dread_chunk_vers=1']
 +nexus_config.add_compiler_arguments(arguments)
 
  # ----------------------------------------------------------------------------
