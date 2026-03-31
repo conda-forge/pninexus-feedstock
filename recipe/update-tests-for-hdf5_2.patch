@@ -1,20 +1,26 @@
 --- a/test/h5cpp_tests/node_tests/node_iterator_test.py
 +++ b/test/h5cpp_tests/node_tests/node_iterator_test.py
-@@ -123,8 +123,9 @@
+@@ -123,8 +123,15 @@
                   h5cpp.Path("/entry/instrument/detector_2"),
                   h5cpp.Path("/entry/instrument/detector_2/data")
                   ]
 -        self.assertListEqual(
 -            node_paths, paths, "Path comparison: {}".format(node_paths))
-+        self.assertSetEqual(
-+            set(node_paths), set(paths),
-+            "Path comparison: {}".format(node_paths))
++        self.assertEqual(
++            len(paths), len(node_paths),
++            "Number of links comparison: {} == {}".format(len(paths),
++                                                          len(node_paths)))
++
++        for path in paths:
++            self.assertTrue(
++                path in node_paths,
++                "Path comparison: {} in {}".format(path, node_paths))
 
      def test_exists(self):
 
 --- a/test/h5cpp_tests/node_tests/link_iteration_test.py
 +++ b/test/h5cpp_tests/node_tests/link_iteration_test.py
-@@ -88,5 +88,6 @@
+@@ -88,8 +88,9 @@
 
          links = [link.path.name for link in entry.links]
 
