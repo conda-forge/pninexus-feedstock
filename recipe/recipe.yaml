@@ -18,7 +18,7 @@ source:
     - update-tests-for-hdf5_2.patch
 
 build:
-  number: 3
+  number: 4
   script:
     - if: win
       then:
