@@ -15,7 +15,11 @@ cxx_compiler:
 cxx_compiler_version:
 - '19'
 hdf5:
-- '2'
+- '2.2'
+h5cpp:
+- '0.8'
+libpninexus:
+- '3.5'
 libboost_devel:
 - '1.90'
 libboost_python_devel:
