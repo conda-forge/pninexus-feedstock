@@ -1,5 +1,5 @@
 context:
-  version: "3.5.0"
+  version: "3.6.0"
 
 package:
   name: pninexus
@@ -7,8 +7,7 @@ package:
 
 source:
   url: https://github.com/pni-libraries/python-pninexus/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: a24a6ded7770f37d6f4fb72ed7d2d20e3f0ed96b342bf66880d299d6a42a3735
-
+  sha256: 9e958ce5bab869d994deaa92ea18a77cd31f6ae109c556b3a9799910dc350c51
 build:
   number: 0
   script:
