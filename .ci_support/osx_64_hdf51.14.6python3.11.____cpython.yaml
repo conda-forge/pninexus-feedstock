@@ -19,7 +19,7 @@ h5cpp:
 hdf5:
 - '1.14.6'
 libpninexus:
-- '3.5'
+- '3.6'
 libboost_devel:
 - '1.90'
 libboost_python_devel:
