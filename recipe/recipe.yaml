@@ -9,7 +9,7 @@ source:
   url: https://github.com/pni-libraries/python-pninexus/archive/refs/tags/v${{ version }}.tar.gz
   sha256: 9e958ce5bab869d994deaa92ea18a77cd31f6ae109c556b3a9799910dc350c51
 build:
-  number: 0
+  number: 1
   script:
     - if: win
       then:
