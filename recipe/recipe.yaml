@@ -1,5 +1,5 @@
 context:
-  version: "3.6.0"
+  version: "3.6.1"
 
 package:
   name: pninexus
@@ -7,9 +7,9 @@ package:
 
 source:
   url: https://github.com/pni-libraries/python-pninexus/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 9e958ce5bab869d994deaa92ea18a77cd31f6ae109c556b3a9799910dc350c51
+  sha256: e9467787dd41572162d321439e7d6457b57914e31305edb0484f03c593bf8da3
 build:
-  number: 1
+  number: 0
   script:
     - if: win
       then:
